@@ -1,0 +1,320 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #a8a7a7;
+    width: 100%;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .brand-name .red-letter {
+    color: red;
+}
+
+header .search img {
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Red Text for Price */
+.red-text {
+    color: red; /* Apply red color to elements with this class */
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: red;
+}
+
+/* Product Buttons Section */
+.product-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #444;
+}
+
+/* Monthly Supplies Section */
+.monthly-supplies {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.monthly-supplies h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.monthly-supplies p {
+    font-size: 1.2rem;
+    color: red;
+}
+
+/* Subscribe Button Section */
+.subscribe-button-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.subscribe-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+.subscribe-button:hover {
+    background-color: #444;
+}
+
+/* Subscriptions Section */
+.subscriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.subscription-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px; /* Reduced space between the 1 & 3 month boxes and the 12 month box */
+}
+
+.subscription {
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 300px;
+    padding: 10px;
+}
+
+.subscription img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.subscription h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens larger than 768px (PC) */
+@media (min-width: 768px) {
+    .product-buttons {
+        justify-content: space-around;
+    }
+
+    .subscriptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .subscription-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscription {
+        width: 30%;
+    }
+
+    .subscription img {
+        width: 100%;
+    }
+
+    .product img, .subscription img {
+        width: 250px;
+    }
+
+    .product button, .subscription h3 {
+        font-size: 1.2rem;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens smaller than 768px (mobile) */
+@media (max-width: 767px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    header .logo img {
+        height: 30px;
+    }
+
+    header .brand-name {
+        font-size: 1.2rem;
+    }
+
+    header .search img {
+        height: 18px;
+    }
+
+    .product-buttons {
+        display: table;
+        width: 100%;
+        padding: 20px;
+        table-layout: fixed;
+    }
+
+    .product {
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+        width: 48%;
+        padding: 10px;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        height: 60px;
+    }
+
+    .product button:hover {
+        background-color: #444;
+    }
+
+    .subscriptions {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .subscription-group {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .subscription {
+        width: 48%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .subscription img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .subscription h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
